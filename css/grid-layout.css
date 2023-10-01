@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* Grid Layout */
+article, footer {
+    padding: 20px;
+    outline-style: inset;
+    outline-width: 1px;
+    outline-color: black;
+}
+
+body {
+    color: saddlebrown;
+    width: 90%;
+    min-width: 640px;
+    max-width: 1024px;
+    margin: 30px auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+}
+
+#goals {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: span 2;
+}
+
+#intfact {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+}
+
+#webname {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#quote {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+/* Colors */
+#goals {
+    background-color: peachpuff;
+}
+
+#intfact {
+    background-color: bisque;
+}
+
+#webname {
+    background-color: blanchedalmond;
+}
+
+#quote {
+    background-color: burlywood;
+}
+
+header, #goals, #intfact, #webname, #quote {
+    box-shadow: 10px 10px black;
+}
+
+/* Background Image */
+body::after {
+    content: "";
+    position: absolute;
+    background-image: url(kratos.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    inset: 0;
+    opacity: .5;
+}
